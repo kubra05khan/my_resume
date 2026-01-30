@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resume - Kubra</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: whitesmoke;
+            margin: 0;
+            padding: 0;
+        }
+
+        .resume {
+            width: 800px;
+            margin: 30px auto;
+            background:whitesmoke;
+            padding: 25px 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header img {
+            width: 130px;
+            height: 160px;
+            border-radius: 5px;
+            object-fit: cover;
+            border: 2px solid #333;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+
+        p, li {
+            line-height: 1.6;
+        }
+
+        .menu button {
+            padding: 10px 15px;
+            margin-right: 10px;
+            border: none;
+            background: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .menu button:hover {
+            background: #555;
+        }
+
+        .toggle-section {
+            display: none;
+            margin-top: 15px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="resume">
+
+    <div class="header">
+        <img src="./assets/image.jpeg" alt="Profile Photo">
+
+        <div>
+            <h1>Kubra</h1>
+            <p>
+                Mysore– 570001 <br>
+                BCA Student | Internship Seeker
+            </p>
+        </div>
+    </div>
+
+    <h2>Objective</h2>
+    <p>
+        Seeking an internship opportunity to apply my knowledge and further develop my skills.
+    </p>
+
+    <h2>Work Experience</h2>
+    <ul>
+        <li>Freelancing – Mehendi Tutor</li>
+        <li>Asma store – stock manager</li>
+    </ul>
+
+    <h2>Academic Qualification</h2>
+    <ul>
+        <li>BCA – Mysore University (2023–Present) – 87.88%</li>
+        <li>PUC (2022–2023) – 87%</li>
+        <li>SSLC (2020–2021) – 88.48%</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <ul>
+        <li>Communication, Teamwork, Leadership</li>
+        <li>MS Word, PowerPoint</li>
+        <li>Java, Python, R, DBMS</li>
+        <li>Designing</li>
+    </ul>
+
+    <h2>More Information</h2>
+    <div class="menu">
+        <button onclick="showHobbies()">Hobbies</button>
+        <button onclick="showContact()">Contact</button>
+        <button onclick="showProjects()">Projects</button>
+        <button onclick="showAchievements()">Achievements</button>
+        <button onclick="showVolunteering()">Volunteering</button>
+        <button onclick="showPassion()">Passion</button>
+        <button onclick="showLanguages()">Languages</button>
+        <button onclick="showDeclaration()">Declaration</button>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div id="hobbies" class="toggle-section">
+        <h3>Hobbies</h3>
+        <ul>
+            <li>crafting</li>
+            <li>drawings</li>
+            <li>Gifting (Hampers, Bouquets, Photo Frames)</li>
+            <li>painting</li>
+        </ul>
+    </div>
+
+    <div id="projects" class="toggle-section">
+    <h3>Projects</h3>
+    <ul>
+        <li>Employee managemnet system (python)</li>
+        <li>Bus Management System (Java)</li>
+    </ul>
+</div>
+    <div id="achievements" class="toggle-section">
+    <h3>Achievements</h3>
+    <ul>
+        <li>secured centum was awarded and recognized maharaja college for securing centum in econumics</li>
+        
+    </ul>
+</div>
+     <div id="volunteering" class="toggle-section">
+    <h3>Volunteering Experience</h3>
+    <ul>
+        <li>Volunteer at College Events</li>
+        <li>distributing water and fruits</li>
+    </ul>
+</div>
+    <div id="passion" class="toggle-section">
+    <h3>Passion</h3>
+    <p>
+        Passionate about learning new technologies,
+        designing, and improving communication skills.
+    </p>
+</div>
+    <div id="languages" class="toggle-section">
+    <h3>Languages Known</h3>
+    <ul>
+        <li>English</li>
+        <li>Hindi</li>
+        <li>Kannada</li>
+        <li>Urdu</li>
+    </ul>
+</div>
+    <div id="declaration" class="toggle-section">
+    <h3>Declaration</h3>
+    <p>
+        I hereby declare that the above information is true
+        to the best of my knowledge.
+    </p>
+    <p><strong>Name:</strong> Kubra</p>
+    <p><strong>Place:</strong> Mysore</p>
+</div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="toggle-section">
+        <h3>Contact Details</h3>
+        <p>
+            📞 Mobile: <strong>8105301219</strong><br>
+            ✉️ Email:kubra05khan@gmail.com
+        </p>
+    </div>
+
+</div>
+
+<script>
+   function showHobbies() {
+        document.getElementById("hobbies").style.display = "block";
+        document.getElementById("contact").style.display = "none";
+}
+    function showContact() {
+    document.getElementById("contact").style.display = "block";
+    document.getElementById("hobbies").style.display = "none";
+}
+
+    
+    function showProjects() {
+    document.getElementById("projects").style.display = "block";
+    document.getElementById("hobbies").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+    document.getElementById("achievements").style.display = "none";
+    document.getElementById("volunteering").style.display = "none";
+    document.getElementById("passion").style.display = "none";
+    document.getElementById("languages").style.display = "none";
+    document.getElementById("declaration").style.display = "none";
+}
+
+function showAchievements() {
+    document.getElementById("achievements").style.display = "block";
+    document.getElementById("projects").style.display = "none";
+    document.getElementById("hobbies").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+    document.getElementById("volunteering").style.display = "none";
+    document.getElementById("passion").style.display = "none";
+    document.getElementById("languages").style.display = "none";
+    document.getElementById("declaration").style.display = "none";
+}
+
+function showVolunteering() {
+    document.getElementById("volunteering").style.display = "block";
+    document.getElementById("projects").style.display = "none";
+    document.getElementById("achievements").style.display = "none";
+    document.getElementById("hobbies").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+    document.getElementById("passion").style.display = "none";
+    document.getElementById("languages").style.display = "none";
+    document.getElementById("declaration").style.display = "none";
+}
+
+function showPassion() {
+    document.getElementById("passion").style.display = "block";
+    document.getElementById("projects").style.display = "none";
+    document.getElementById("achievements").style.display = "none";
+    document.getElementById("volunteering").style.display = "none";
+    document.getElementById("hobbies").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+    document.getElementById("languages").style.display = "none";
+    document.getElementById("declaration").style.display = "none";
+}
+
+function showLanguages() {
+    document.getElementById("languages").style.display = "block";
+    document.getElementById("projects").style.display = "none";
+    document.getElementById("achievements").style.display = "none";
+    document.getElementById("volunteering").style.display = "none";
+    document.getElementById("passion").style.display = "none";
+    document.getElementById("hobbies").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+    document.getElementById("declaration").style.display = "none";
+}
+
+function showDeclaration() {
+    document.getElementById("declaration").style.display = "block";
+    document.getElementById("projects").style.display = "none";
+    document.getElementById("achievements").style.display = "none";
+    document.getElementById("volunteering").style.display = "none";
+    document.getElementById("passion").style.display = "none";
+    document.getElementById("languages").style.display = "none";
+    document.getElementById("hobbies").style.display = "none";
+    document.getElementById("contact").style.display = "none";
+}
+
+
+
+</script>
+
+</body>
+</html>
